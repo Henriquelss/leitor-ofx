@@ -19,7 +19,7 @@ Um projeto em **React + TypeScript** que permite o upload de arquivos `.ofx` par
 
 ## 📸 Captura de Tela
 
-![App Screenshot](./screenshot.png)
+![Captura de tela 2025-06-28 031637](https://github.com/user-attachments/assets/c9b53664-8e32-49fb-bd24-c0f198f307ba)
 
 ---
 
