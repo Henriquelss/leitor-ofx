@@ -1,39 +1,36 @@
-# 📂 Leitor de Arquivo OFX
+# 📂 Leitor de Arquivos OFX
 
-Um projeto em **React + TypeScript** que permite o upload de arquivos `.ofx` para visualizar extratos bancários de forma clara e detalhada.
+Um projeto React + TypeScript para ler e exibir arquivos bancários `.ofx` de forma detalhada e amigável, permitindo visualizar transações de **crédito** e **débito**, com totais.
 
-![preview](https://img.shields.io/badge/React-18.x-blue?style=flat&logo=react) ![vite](https://img.shields.io/badge/Vite-5.x-yellow?style=flat&logo=vite) ![typescript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat&logo=typescript)
+![image](https://github.com/user-attachments/assets/bcf86a15-9d28-4011-b475-91ac69f1342c)
 
----
-
-## 💡 Funcionalidades
-
-✅ Upload de arquivos `.ofx`  
-✅ Leitura e conversão do OFX em JSON  
-✅ Tabela com listagem de transações  
-✅ Filtro por tipo: crédito ou débito  
-✅ Cálculo automático de totais  
-✅ Estilo leve e responsivo
 
 ---
 
-## 📸 Captura de Tela
+## 📚 Funcionalidades
 
-![image](https://github.com/user-attachments/assets/0eb8950c-a236-400b-b2bf-ce74986f976a)
+- Upload de arquivos `.ofx`
+- Conversão do conteúdo OFX em formato JSON
+- Visualização de transações em tabela
+- Cálculo de totais de crédito, débito e saldo final
+- Estilização leve e responsiva
 
 ---
 
-## 🚀 Como rodar localmente
+## 🛠️ Tecnologias utilizadas
+
+- **[React](https://reactjs.org/)** — biblioteca para construção da interface
+- **[TypeScript](https://www.typescriptlang.org/)** — linguagem tipada para JavaScript
+- **[Vite](https://vitejs.dev/)** — bundler e dev server ultrarrápido
+- **[OFX parser](https://www.npmjs.com/package/ofx-js)** — parser de arquivos bancários `.ofx`
+- **CSS puro** — com foco em design leve e acessível
+
+---
+
+## 🚀 Como usar localmente
+
+### 1. Clone o repositório
 
 ```bash
-# Clone o repositório
 git clone https://github.com/seu-usuario/leitor-ofx.git
-
-# Acesse a pasta
 cd leitor-ofx
-
-# Instale as dependências
-npm install
-
-# Inicie o servidor de desenvolvimento
-npm run dev
