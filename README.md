@@ -1,69 +1,39 @@
-# React + TypeScript + Vite
+# 📂 Leitor de Arquivo OFX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto em **React + TypeScript** que permite o upload de arquivos `.ofx` para visualizar extratos bancários de forma clara e detalhada.
 
-Currently, two official plugins are available:
+![preview](https://img.shields.io/badge/React-18.x-blue?style=flat&logo=react) ![vite](https://img.shields.io/badge/Vite-5.x-yellow?style=flat&logo=vite) ![typescript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat&logo=typescript)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 💡 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Upload de arquivos `.ofx`  
+✅ Leitura e conversão do OFX em JSON  
+✅ Tabela com listagem de transações  
+✅ Filtro por tipo: crédito ou débito  
+✅ Cálculo automático de totais  
+✅ Estilo leve e responsivo
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📸 Captura de Tela
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![App Screenshot](./screenshot.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Como rodar localmente
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/leitor-ofx.git
+
+# Acesse a pasta
+cd leitor-ofx
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
