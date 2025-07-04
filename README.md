@@ -4,7 +4,6 @@ Um projeto React + TypeScript para ler e exibir arquivos bancários `.ofx` de fo
 
 ![image](https://github.com/user-attachments/assets/bcf86a15-9d28-4011-b475-91ac69f1342c)
 
----
 
 ## 📚 Funcionalidades
 
@@ -14,7 +13,6 @@ Um projeto React + TypeScript para ler e exibir arquivos bancários `.ofx` de fo
 - Cálculo de totais de crédito, débito e saldo final
 - Estilização leve e responsiva
 
----
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -26,7 +24,6 @@ Um projeto React + TypeScript para ler e exibir arquivos bancários `.ofx` de fo
 | **Estilização**       | CSS Puro — design leve e acessível                                       |
 | **Controle de Versão**| Git & GitHub                                                             |
 
----
 
 ## 🚀 Como usar localmente
 
