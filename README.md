@@ -4,7 +4,6 @@ Um projeto React + TypeScript para ler e exibir arquivos bancários `.ofx` de fo
 
 ![image](https://github.com/user-attachments/assets/bcf86a15-9d28-4011-b475-91ac69f1342c)
 
-
 ---
 
 ## 📚 Funcionalidades
@@ -17,13 +16,15 @@ Um projeto React + TypeScript para ler e exibir arquivos bancários `.ofx` de fo
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-- **[React](https://reactjs.org/)** — biblioteca para construção da interface
-- **[TypeScript](https://www.typescriptlang.org/)** — linguagem tipada para JavaScript
-- **[Vite](https://vitejs.dev/)** — bundler e dev server ultrarrápido
-- **[OFX parser](https://www.npmjs.com/package/ofx-js)** — parser de arquivos bancários `.ofx`
-- **CSS puro** — com foco em design leve e acessível
+| Categoria             | Tecnologias                                                              |
+|-----------------------|---------------------------------------------------------------------------|
+| **Frontend**          | React.js, TypeScript                                                     |
+| **Build Tool**        | Vite                                                                     |
+| **Parser de Arquivos**| [OFX-js](https://www.npmjs.com/package/ofx-js) — parser de arquivos `.ofx` |
+| **Estilização**       | CSS Puro — design leve e acessível                                       |
+| **Controle de Versão**| Git & GitHub                                                             |
 
 ---
 
