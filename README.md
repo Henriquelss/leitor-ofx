@@ -2,7 +2,7 @@
 
 Um projeto React + TypeScript para ler e exibir arquivos bancários `.ofx` de forma detalhada e amigável, permitindo visualizar transações de **crédito** e **débito**, com totais.
 
-![image](![image](https://github.com/user-attachments/assets/c16db132-875c-48d6-af7c-aab7f2fe658c)
+![image](https://github.com/user-attachments/assets/b00705b1-bdf7-4757-a9b4-37b503b1137e)
 [![GitHub Pages Deploy](https://img.shields.io/github/deployments/henriquelss/consulta-veicular-fipe/github-pages?label=deploy)](https://henriquelss.github.io/leitor-ofx/)
 
 
