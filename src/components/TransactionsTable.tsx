@@ -51,7 +51,10 @@ export default function TransactionsTable({ transactions }: Props) {
           {transactions.map((t, index) => (
             <tr key={index} className={t.type.toUpperCase() === 'DEBIT' ? 'debit' : 'credit'}>
               <td>{formatDate(t.date)}</td>
-              <td>{t.type.toUpperCase()}</td>
+              {/* ALTERAÇÃO APLICADA AQUI */}
+              <td style={{ color: t.type.toUpperCase() === 'DEBIT' ? '#c0392b' : '#27ae60' }}>
+                {t.type.toUpperCase()}
+              </td>
               <td>{formatCurrency(t.amount)}</td>
               <td>{t.memo}</td>
             </tr>

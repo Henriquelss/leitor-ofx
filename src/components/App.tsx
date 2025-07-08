@@ -26,7 +26,7 @@ export default function App() {
       <input type="file" accept=".ofx" onChange={handleFileChange} />
 
       {transactions.length > 0 && (
-        <button onClick={handleShowData}>Exibir Dados</button>
+        <button onClick={handleShowData}>Exibir dados</button>
       )}
 
       {showData && <TransactionsTable transactions={transactions} />}
