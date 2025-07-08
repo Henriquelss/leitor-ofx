@@ -1,10 +1,4 @@
-export interface Transaction {
-  type: string;
-  date: string;
-  amount: string;
-  memo: string;
-}
-
+import type { Transaction } from '../types/Transaction';
 
 export function extractTransactions(ofxText: string): Transaction[] {
   const regex = /<STMTTRN>([\s\S]*?)<\/STMTTRN>/g;
@@ -19,7 +13,6 @@ export function extractTransactions(ofxText: string): Transaction[] {
     return { type, date, amount, memo };
   });
 }
-
 
 export async function parseOFXFile(file: File): Promise<Transaction[]> {
   const text = await file.text();

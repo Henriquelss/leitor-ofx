@@ -1,87 +1,77 @@
 import type { Transaction } from '../types/Transaction';
 import './TransactionsTable.css';
 
-
 interface Props {
   transactions: Transaction[];
 }
 
-export default function TransactionsTable({ transactions }: Props) {
-  if (!transactions.length) return null;
-
-  const creditTotal = transactions
-    .filter(t => t.type === 'CREDIT')
-    .reduce((sum, t) => sum + Number(t.amount), 0);
-
-  const debitTotal = transactions
-    .filter(t => t.type === 'DEBIT')
-    .reduce((sum, t) => sum + Number(t.amount), 0);
-
-  const balance = creditTotal + debitTotal;
-
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th>Data</th>
-          <th>Tipo</th>
-          <th>Valor</th>
-          <th>Descrição</th>
-        </tr>
-      </thead>
-      <tbody>
-        {transactions.map((t, i) => (
-          <tr key={i}>
-            <td>{formatDate(t.date)}</td>
-            <td className={t.type === 'CREDIT' ? 'credit-cell' : t.type === 'DEBIT' ? 'debit-cell' : ''}>
-              {t.type}
-            </td>
-            <td>{formatCurrency(t.amount)}</td>
-            <td>{t.memo}</td>
-          </tr>
-        ))}
-      </tbody>
-
-      <tfoot>
-        <tr>
-          <td colSpan={2}></td>
-          <td colSpan={2} className="credit-total">
-            <strong>Total de Créditos:</strong> {formatCurrency(creditTotal.toString())}
-          </td>
-        </tr>
-        <tr>
-          <td colSpan={2}></td>
-          <td colSpan={2} className="debit-total">
-            <strong>Total de Débitos:</strong> {formatCurrency(debitTotal.toString())}
-          </td>
-        </tr>
-        <tr>
-          <td colSpan={2} className="balance-total"></td>
-          <td colSpan={2}>
-            <strong>Saldo Final:</strong> {formatCurrency(balance.toString())}
-          </td>
-        </tr>
-      </tfoot>
-
-    </table>
-  );
+function formatDate(ofxDate: string): string {
+  const match = ofxDate.match(/^(\d{4})(\d{2})(\d{2})/);
+  if (!match) return ofxDate;
+  const [, year, month, day] = match;
+  return `${day}/${month}/${year}`;
 }
 
-function formatDate(date: string): string {
-  const match = date.match(/^(\d{4})(\d{2})(\d{2})/);
-  if (!match) return date;
-  return `${match[3]}/${match[2]}/${match[1]}`;
-}
+function formatCurrency(amountStr: string): string {
+  const amount = parseFloat(amountStr);
+  const isNegative = amount < 0;
+  const absolute = Math.abs(amount);
 
-function formatCurrency(amount: string): string {
-  const num = Number(amount);
-  if (isNaN(num)) return amount;
-
-  const abs = Math.abs(num).toLocaleString('pt-BR', {
+  const formatted = absolute.toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL',
-    minimumFractionDigits: 2,
   });
 
-  return num < 0 ? `R$ -${abs.replace('R$', '').trim()}` : abs;
+  return isNegative ? `R$ -${formatted.replace('R$', '').trim()}` : formatted;
+}
+
+export default function TransactionsTable({ transactions }: Props) {
+  const creditTotal = transactions
+    .filter(t => t.type.toUpperCase() === 'CREDIT')
+    .reduce((sum, t) => sum + parseFloat(t.amount), 0);
+
+  const debitTotal = transactions
+    .filter(t => t.type.toUpperCase() === 'DEBIT')
+    .reduce((sum, t) => sum + parseFloat(t.amount), 0);
+
+  const balance = creditTotal + debitTotal; // Débitos já vêm negativos
+
+  return (
+    <div className="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+        <tbody>
+          {transactions.map((t, index) => (
+            <tr key={index} className={t.type.toUpperCase() === 'DEBIT' ? 'debit' : 'credit'}>
+              <td>{formatDate(t.date)}</td>
+              <td>{t.type.toUpperCase()}</td>
+              <td>{formatCurrency(t.amount)}</td>
+              <td>{t.memo}</td>
+            </tr>
+          ))}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colSpan={2}></td>
+            <td colSpan={2} className="credit-total"><strong>Total Créditos:</strong> {formatCurrency(creditTotal.toString())}</td>
+          </tr>
+          <tr>
+            <td colSpan={2}></td>
+            <td colSpan={2} className="debit-total"><strong>Total Débitos:</strong> {formatCurrency(debitTotal.toString())}</td>
+          </tr>
+          <tr>
+            <td colSpan={2}></td>
+            <td colSpan={2} className="balance-total"><strong>Saldo Final:</strong> {formatCurrency(balance.toString())}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  );
 }

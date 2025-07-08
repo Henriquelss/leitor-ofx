@@ -1,42 +1,35 @@
-import { useState } from 'react';
-import { parseOFXFile } from '../utils/ofxParser';
-import type { Transaction } from '../types/Transaction';
+import { useState } from 'react'; 
+import { parseOFXFile } from '../utils/ofxParser'; 
+import type { Transaction } from '../types/Transaction'; 
 import TransactionsTable from './TransactionsTable';
-
 
 export default function App() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [parsedTransactions, setParsedTransactions] = useState<Transaction[] | null>(null);
+  const [showData, setShowData] = useState(false);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-
     const parsed = await parseOFXFile(file);
-    console.log('Arquivo carregado e parseado:', parsed); 
     setTransactions(parsed);
-    setParsedTransactions(null); 
+    setShowData(false);
   };
 
   const handleShowData = () => {
-    console.log('Transações exibidas:', transactions); 
-    setParsedTransactions(transactions);
+    setShowData(true);
   };
 
   return (
     <div className="container">
-      <h1>Leitor de Arquivo OFX</h1>
+      <h1>📄 Leitor de Arquivo OFX</h1>
+
       <input type="file" accept=".ofx" onChange={handleFileChange} />
 
-      {}
       {transactions.length > 0 && (
-        <button onClick={handleShowData}>Exibir dados</button>
+        <button onClick={handleShowData}>Exibir Dados</button>
       )}
 
-      {}
-      {parsedTransactions && parsedTransactions.length > 0 && (
-        <TransactionsTable transactions={parsedTransactions} />
-      )}
+      {showData && <TransactionsTable transactions={transactions} />}
     </div>
   );
 }
