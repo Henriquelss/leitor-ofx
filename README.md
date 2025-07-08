@@ -16,13 +16,13 @@ Um projeto React + TypeScript para ler e exibir arquivos bancários `.ofx` de fo
 
 ## 🛠️ Tecnologias Utilizadas
 
-| Categoria             | Tecnologias                                                              |
-|-----------------------|---------------------------------------------------------------------------|
-| **Frontend**          | React.js, TypeScript                                                     |
-| **Build Tool**        | Vite                                                                     |
-| **Parser de Arquivos**| [OFX-js](https://www.npmjs.com/package/ofx-js) — parser de arquivos `.ofx` |
-| **Estilização**       | CSS Puro — design leve e acessível                                       |
-| **Controle de Versão**| Git & GitHub                                                             |
+| Categoria               | Tecnologias                                      |
+|-------------------------|-------------------------------------------------|
+| **Frontend**            | React.js, TypeScript                            |
+| **Build Tool**          | Vite                                            |
+| **Leitura de Arquivos OFX** | Regex manual para extração dos dados `.ofx`      |
+| **Estilização**         | CSS Puro — Design leve, limpo e acessível       |
+| **Controle de Versão**  | Git & GitHub        
 
 
 ## 🚀 Como usar localmente
