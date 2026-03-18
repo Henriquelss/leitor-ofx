@@ -11,7 +11,7 @@ import { useHistory, type HistorySession } from '../hooks/useHistory';
 type Tab = 'processor' | 'history' | 'settings';
 
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState<Tab>('processor');
+  const [activeTab, setActiveTab] = useState<Tab>('history');
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
