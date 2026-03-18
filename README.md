@@ -12,6 +12,9 @@ Um projeto React + TypeScript premium para decodificar, analisar e compilar de f
   />
 </p>
 
+<img width="1408" height="748" alt="Captura de tela 2026-03-18 122714" src="https://github.com/user-attachments/assets/10ab0a42-a0a5-496a-a2ef-0a40b341e6b4" />
+
+
 [![GitHub Pages Deploy](https://img.shields.io/github/deployments/henriquelss/consulta-veicular-fipe/github-pages?label=deploy)](https://henriquelss.github.io/leitor-ofx/)
 
 ---
