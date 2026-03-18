@@ -59,7 +59,7 @@ export default function Dashboard() {
             {transactions.length === 0 ? (
               <Dropzone onFileSelect={processFile} isLoading={isLoading} error={error} />
             ) : (
-              <TransactionsTable transactions={transactions} />
+              <TransactionsTable transactions={transactions} onNewFile={() => setTransactions([])} />
             )}
           </>
         )}
