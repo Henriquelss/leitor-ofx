@@ -42,23 +42,23 @@ export default function History({ sessions = [], onDeleteSession, onClearAll, on
           const balance = session.balance || 0;
 
           return (
-            <div key={session.id || `session-${timestamp}-${Math.random()}`} className="bg-white border text-left border-slate-200 rounded-2xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-slate-300 transition-colors shadow-sm">
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <h3 className="font-bold text-slate-900">{fileName}</h3>
-                  <span className="text-xs font-semibold bg-slate-100 text-slate-500 px-2 py-1 rounded">
+            <div key={session.id || `session-${timestamp}-${Math.random()}`} className="bg-white border text-left border-slate-200 rounded-2xl p-5 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-5 md:gap-4 hover:border-slate-300 transition-colors shadow-sm">
+              <div className="w-full">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3 mb-2 w-full">
+                  <h3 className="font-bold text-slate-900 truncate">{fileName}</h3>
+                  <span className="text-xs font-semibold bg-slate-100 text-slate-500 px-2 py-1 rounded w-fit">
                     {totalTransactions} transações
                   </span>
                 </div>
                 <p className="text-sm text-slate-500">
-                  Data do arquivo: {new Date(timestamp).toLocaleString('pt-BR', { dateStyle: 'long', timeStyle: 'short' })}
+                  Data: {new Date(timestamp).toLocaleString('pt-BR', { dateStyle: 'long', timeStyle: 'short' })}
                 </p>
               </div>
 
-              <div className="flex items-center gap-6 w-full md:w-auto">
-                <div className="text-right flex-1 md:flex-none">
-                  <p className="text-xs font-semibold text-slate-400 mb-1 uppercase tracking-wider">Saldo Final</p>
-                  <div className={`font-bold ${balance < 0 ? 'text-red-500' : 'text-slate-900'}`}>
+              <div className="flex flex-row justify-between md:justify-end items-center gap-6 w-full md:w-auto pt-4 md:pt-0 border-t border-slate-100 md:border-none">
+                <div className="text-left md:text-right flex-1 md:flex-none">
+                  <p className="text-[11px] font-bold text-slate-400 mb-0.5 uppercase tracking-wider">Saldo Final</p>
+                  <div className={`font-bold text-lg leading-tight ${balance < 0 ? 'text-red-500' : 'text-slate-900'}`}>
                     {balance.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                   </div>
                 </div>

@@ -38,40 +38,40 @@ export default function TransactionsTable({ transactions }: Props) {
 
   return (
     <div className="animate-[fadeIn_0.4s_ease-out]">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div className="bg-white p-6 rounded-2xl shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] border border-slate-50">
-          <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">TOTAL CRÉDITOS</div>
-          <div className="text-3xl font-bold flex justify-between items-center text-emerald-600">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+        <div className="bg-white p-5 md:p-6 rounded-2xl shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-row items-center justify-between md:flex-col md:items-start md:justify-start">
+          <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest md:mb-3">CREDITADOS</div>
+          <div className="text-2xl md:text-3xl font-bold flex justify-between items-center text-emerald-600 w-auto md:w-full">
             {summary.credits.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-            <span className="text-xl">↗</span>
+            <span className="hidden md:inline text-xl">↗</span>
           </div>
         </div>
-        <div className="bg-white p-6 rounded-2xl shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] border border-slate-50">
-          <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">TOTAL DÉBITOS</div>
-          <div className="text-3xl font-bold flex justify-between items-center text-red-500">
+        <div className="bg-white p-5 md:p-6 rounded-2xl shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-row items-center justify-between md:flex-col md:items-start md:justify-start">
+          <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest md:mb-3">DEBITADOS</div>
+          <div className="text-2xl md:text-3xl font-bold flex justify-between items-center text-red-500 w-auto md:w-full">
             {Math.abs(summary.debits).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-            <span className="text-xl">↘</span>
+            <span className="hidden md:inline text-xl">↘</span>
           </div>
         </div>
-        <div className="bg-white p-6 rounded-2xl shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] border border-slate-50">
-          <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">SALDO FINAL</div>
-          <div className="text-3xl font-bold flex justify-between items-center text-slate-900">
+        <div className="bg-white p-5 md:p-6 rounded-2xl shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-row items-center justify-between md:flex-col md:items-start md:justify-start">
+          <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest md:mb-3">SALDO ATUAL</div>
+          <div className="text-2xl md:text-3xl font-bold flex justify-between items-center text-slate-900 w-auto md:w-full">
             {summary.balance.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-            <span className="text-slate-800">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path d="M4 10h3v7H4zM10.5 10h3v7h-3zM2 19h20v3H2zM17 10h3v7h-3zM12 1L2 6v2h20V6z"/></svg>
+            <span className="hidden md:inline text-slate-800">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 md:w-6 md:h-6"><path d="M4 10h3v7H4zM10.5 10h3v7h-3zM2 19h20v3H2zM17 10h3v7h-3zM12 1L2 6v2h20V6z"/></svg>
             </span>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0 mb-6 w-full">
         <h2 className="text-xl font-bold text-slate-900">Transações Recentes</h2>
-        <div className="flex gap-4">
-          <button className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 text-sm font-medium rounded-lg transition-colors">
+        <div className="flex gap-3 w-full md:w-auto">
+          <button className="flex-1 md:flex-none px-4 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 text-sm font-bold rounded-lg transition-colors whitespace-nowrap">
             Exportar CSV
           </button>
           <button 
-            className="px-4 py-2 bg-slate-900 hover:bg-black text-white text-sm font-medium rounded-lg transition-colors"
+            className="flex-1 md:flex-none px-4 py-2.5 bg-slate-900 hover:bg-black text-white text-sm font-bold rounded-lg transition-colors whitespace-nowrap"
             onClick={() => window.location.reload()}
           >
             Exportar arquivo
@@ -79,27 +79,27 @@ export default function TransactionsTable({ transactions }: Props) {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] border border-slate-50">
-        <table className="w-full text-left border-collapse">
+      <div className="bg-white rounded-2xl overflow-x-auto shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] border border-slate-50">
+        <table className="w-full text-left border-collapse min-w-[650px]">
           <thead>
             <tr>
-              <th className="bg-slate-100/50 text-slate-500 text-xs font-bold uppercase tracking-wider px-6 py-4">DATA</th>
-              <th className="bg-slate-100/50 text-slate-500 text-xs font-bold uppercase tracking-wider px-6 py-4">DESCRIÇÃO</th>
-              <th className="bg-slate-100/50 text-slate-500 text-xs font-bold uppercase tracking-wider px-6 py-4">CATEGORIA</th>
-              <th className="bg-slate-100/50 text-slate-500 text-xs font-bold uppercase tracking-wider px-6 py-4 text-right">VALOR</th>
+              <th className="bg-slate-100/50 text-slate-500 text-xs font-bold uppercase tracking-wider px-4 md:px-6 py-4">DATA</th>
+              <th className="bg-slate-100/50 text-slate-500 text-xs font-bold uppercase tracking-wider px-4 md:px-6 py-4">DESCRIÇÃO</th>
+              <th className="bg-slate-100/50 text-slate-500 text-xs font-bold uppercase tracking-wider px-4 md:px-6 py-4">CATEGORIA</th>
+              <th className="bg-slate-100/50 text-slate-500 text-xs font-bold uppercase tracking-wider px-4 md:px-6 py-4 text-right">VALOR</th>
             </tr>
           </thead>
           <tbody>
             {transactions.map((t) => (
               <tr key={t.id} className="border-b border-slate-50 last:border-0 hover:bg-slate-50/50 transition-colors">
-                <td className="px-6 py-5 text-sm text-slate-600 font-medium whitespace-nowrap">{formatDate(t.date)}</td>
-                <td className="px-6 py-5 text-sm font-bold text-slate-900">{t.memo}</td>
-                <td className="px-6 py-5">
-                  <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase ${getCategoryColor(t.category || '')}`}>
+                <td className="px-4 md:px-6 py-4 md:py-5 text-sm text-slate-600 font-medium whitespace-nowrap">{formatDate(t.date)}</td>
+                <td className="px-4 md:px-6 py-4 md:py-5 text-sm font-bold text-slate-900">{t.memo}</td>
+                <td className="px-4 md:px-6 py-4 md:py-5">
+                  <span className={`inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase whitespace-nowrap ${getCategoryColor(t.category || '')}`}>
                     {t.category}
                   </span>
                 </td>
-                <td className={`px-6 py-5 text-right font-bold text-sm whitespace-nowrap ${t.amount < 0 ? 'text-red-500' : 'text-emerald-600'}`}>
+                <td className={`px-4 md:px-6 py-4 md:py-5 text-right font-bold text-sm whitespace-nowrap ${t.amount < 0 ? 'text-red-500' : 'text-emerald-600'}`}>
                   {formatCurrency(t.amount)}
                 </td>
               </tr>

@@ -34,7 +34,7 @@ export default function Dropzone({ onFileSelect, isLoading, error }: DropzonePro
   return (
     <div className="max-w-3xl mx-auto animate-[fadeIn_0.6s_ease-out]">
       <div 
-        className={`relative bg-slate-100 rounded-3xl p-16 md:p-24 flex flex-col items-center justify-center text-center transition-all duration-300 border-2 ${isDragging ? 'border-blue-500 bg-blue-50 shadow-[0_0_0_4px_rgba(59,130,246,0.1)]' : 'border-dashed border-transparent hover:bg-slate-200'}`}
+        className={`relative bg-slate-100/80 rounded-[32px] p-8 md:p-24 flex flex-col items-center justify-center text-center transition-all duration-300 border-2 ${isDragging ? 'border-blue-500 bg-blue-50 shadow-[0_0_0_4px_rgba(59,130,246,0.1)]' : 'border-dashed border-transparent hover:bg-slate-200/80 hover:scale-[1.01]'}`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
@@ -46,11 +46,11 @@ export default function Dropzone({ onFileSelect, isLoading, error }: DropzonePro
           className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
           title=""
         />
-        <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 text-slate-800">
-          <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.83V19h2v-4.17l1.59 1.59L16 15.01 12.01 11 8 15.01z"/></svg>
+        <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-5 md:mb-6 text-slate-800">
+          <svg className="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.83V19h2v-4.17l1.59 1.59L16 15.01 12.01 11 8 15.01z"/></svg>
         </div>
-        <h3 className="text-xl font-bold mb-2 text-slate-900">Arraste seu arquivo .ofx aqui</h3>
-        <p className="text-slate-500 text-sm">ou clique para selecionar do seu computador</p>
+        <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-slate-900 tracking-tight">Arraste seu arquivo .ofx aqui</h3>
+        <p className="text-slate-500 text-sm md:text-base font-medium">ou toque para selecionar do seu dispositivo</p>
       </div>
       
       {isLoading && (

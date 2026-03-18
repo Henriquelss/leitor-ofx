@@ -46,12 +46,12 @@ export default function Dashboard() {
     <div className="min-h-screen flex flex-col font-sans text-slate-900 bg-slate-50 selection:bg-blue-100 selection:text-blue-900">
       <Header activeTab={activeTab} onChangeTab={setActiveTab} />
 
-      <main className="flex-1 w-full max-w-[1100px] mx-auto px-6 py-12 md:py-20">
+      <main className="flex-1 w-full max-w-[1100px] mx-auto px-4 md:px-6 py-8 md:py-20">
         {activeTab === 'processor' && (
           <>
-            <div className="text-center mb-16 animate-[fadeIn_0.5s_ease-out]">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900">Processamento Soberano</h1>
-              <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+            <div className="text-center mb-10 md:mb-16 animate-[fadeIn_0.5s_ease-out]">
+              <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900">Processamento Soberano</h1>
+              <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-2 md:px-0">
                 Transforme seus extratos OFX em dados acionáveis com a precisão de um livro contábil mestre.
               </p>
             </div>
