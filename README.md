@@ -10,14 +10,18 @@ Um projeto React + TypeScript premium para decodificar, analisar e compilar de f
       <img 
         src="https://github.com/user-attachments/assets/eb4183b0-330b-478e-9a29-a5e66d76d9bb" 
         alt="Preview 1"
-        width="100%"
+        width="400"
+        height="250"
+        style="object-fit: cover;"
       />
     </td>
     <td>
       <img 
         src="https://github.com/user-attachments/assets/10ab0a42-a0a5-496a-a2ef-0a40b341e6b4"
         alt="Preview 2"
-        width="100%"
+        width="400"
+        height="250"
+        style="object-fit: cover;"
       />
     </td>
   </tr>
