@@ -4,19 +4,24 @@ Um projeto React + TypeScript premium para decodificar, analisar e compilar de f
 
 ## 📸 Preview
 
-<p align="center">
-  <img 
-    src="https://github.com/user-attachments/assets/eb4183b0-330b-478e-9a29-a5e66d76d9bb" 
-    alt="Preview do projeto" 
-    width="900"
-  />
-</p>
-
-<img align="center"
-  src="https://github.com/user-attachments/assets/10ab0a42-a0a5-496a-a2ef-0a40b341e6b4"
-  alt="Captura de tela 2026-03-18 122714"
-  width="900"
-  />
+<table>
+  <tr>
+    <td>
+      <img 
+        src="https://github.com/user-attachments/assets/eb4183b0-330b-478e-9a29-a5e66d76d9bb" 
+        alt="Preview 1"
+        width="100%"
+      />
+    </td>
+    <td>
+      <img 
+        src="https://github.com/user-attachments/assets/10ab0a42-a0a5-496a-a2ef-0a40b341e6b4"
+        alt="Preview 2"
+        width="100%"
+      />
+    </td>
+  </tr>
+</table>
 
 
 [![GitHub Pages Deploy](https://img.shields.io/github/deployments/henriquelss/consulta-veicular-fipe/github-pages?label=deploy)](https://henriquelss.github.io/leitor-ofx/)
