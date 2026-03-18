@@ -15,7 +15,8 @@ Um projeto React + TypeScript premium para decodificar, analisar e compilar de f
 <img 
   src="https://github.com/user-attachments/assets/10ab0a42-a0a5-496a-a2ef-0a40b341e6b4"
   alt="Captura de tela 2026-03-18 122714"
-  width="900" 
+  width="900"
+  align="center"
   />
 
 
