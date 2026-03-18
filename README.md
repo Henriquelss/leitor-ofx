@@ -2,7 +2,7 @@
 
 Um projeto React + TypeScript premium para decodificar, analisar e compilar de forma escalonável seus arquivos bancários `.ofx`. Construído com design responsivo, alto desempenho e cache local.
 
-![image](https://github.com/user-attachments/assets/b00705b1-bdf7-4757-a9b4-37b503b1137e)
+![image](<img width="1413" height="882" alt="Captura de tela 2026-03-18 122656" src="https://github.com/user-attachments/assets/eb4183b0-330b-478e-9a29-a5e66d76d9bb" />)
 
 [![GitHub Pages Deploy](https://img.shields.io/github/deployments/henriquelss/consulta-veicular-fipe/github-pages?label=deploy)](https://henriquelss.github.io/leitor-ofx/)
 
