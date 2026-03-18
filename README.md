@@ -3,6 +3,7 @@
 Um projeto React + TypeScript premium para decodificar, analisar e compilar de forma escalonável seus arquivos bancários `.ofx`. Construído com design responsivo, alto desempenho e cache local.
 
 ## 📸 Preview
+## 📸 Preview
 
 <p align="center">
   <table>
@@ -24,9 +25,7 @@ Um projeto React + TypeScript premium para decodificar, analisar e compilar de f
         </div>
         <sub><b>Dashboard de Transações</b></sub>
       </td>
-
       <td width="24"></td>
-
       <td align="center">
         <div style="
           border-radius: 12px;
