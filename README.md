@@ -4,29 +4,49 @@ Um projeto React + TypeScript premium para decodificar, analisar e compilar de f
 
 ## 📸 Preview
 
-<table>
-  <tr>
-    <td>
-      <img 
-        src="https://github.com/user-attachments/assets/eb4183b0-330b-478e-9a29-a5e66d76d9bb" 
-        alt="Preview 1"
-        width="400"
-        height="250"
-        style="object-fit: cover;"
-      />
-    </td>
-    <td>
-      <img 
-        src="https://github.com/user-attachments/assets/10ab0a42-a0a5-496a-a2ef-0a40b341e6b4"
-        alt="Preview 2"
-        width="400"
-        height="250"
-        style="object-fit: cover;"
-      />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <div style="
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+          border: 1px solid #e5e7eb;
+        ">
+          <img 
+            src="https://github.com/user-attachments/assets/eb4183b0-330b-478e-9a29-a5e66d76d9bb" 
+            alt="Dashboard"
+            width="420"
+            height="260"
+            style="object-fit: cover; display: block;"
+          />
+        </div>
+        <sub><b>Dashboard de Transações</b></sub>
+      </td>
 
+      <td width="24"></td>
+
+      <td align="center">
+        <div style="
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+          border: 1px solid #e5e7eb;
+        ">
+          <img 
+            src="https://github.com/user-attachments/assets/10ab0a42-a0a5-496a-a2ef-0a40b341e6b4"
+            alt="Histórico"
+            width="420"
+            height="260"
+            style="object-fit: cover; display: block;"
+          />
+        </div>
+        <sub><b>Histórico Offline</b></sub>
+      </td>
+    </tr>
+  </table>
+</p>
 
 [![GitHub Pages Deploy](https://img.shields.io/github/deployments/henriquelss/consulta-veicular-fipe/github-pages?label=deploy)](https://henriquelss.github.io/leitor-ofx/)
 
