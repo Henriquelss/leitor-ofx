@@ -1,0 +1,78 @@
+{
+  "OFX": {
+    "SIGNONMSGSRSV1": {
+      "SONRS": {
+        "STATUS": {
+          "CODE": "0",
+          "SEVERITY": "INFO"
+        },
+        "DTSERVER": "20260318100000",
+        "LANGUAGE": "POR",
+        "FI": {
+          "ORG": "Banco Ficticio",
+          "FID": "9999"
+        }
+      }
+    },
+    "BANKMSGSRSV1": {
+      "STMTTRNRS": {
+        "TRNUID": "1",
+        "STATUS": {
+          "CODE": "0",
+          "SEVERITY": "INFO"
+        },
+        "STMTRS": {
+          "CURDEF": "BRL",
+          "BANKACCTFROM": {
+            "BANKID": "0001",
+            "ACCTID": "12345678-9",
+            "ACCTTYPE": "CHECKING"
+          },
+          "BANKTRANLIST": {
+            "DTSTART": "20260301000000",
+            "DTEND": "20260315000000",
+            "STMTTRN": [
+              {
+                "TRNTYPE": "DEBIT",
+                "DTPOSTED": "20260305120000",
+                "TRNAMT": "-150.00",
+                "FITID": "20260305001",
+                "CHECKNUM": "001",
+                "MEMO": "Supermercado Exemplo"
+              },
+              {
+                "TRNTYPE": "CREDIT",
+                "DTPOSTED": "20260310120000",
+                "TRNAMT": "2500.00",
+                "FITID": "20260310002",
+                "MEMO": "Deposito Salario"
+              },
+              {
+                "TRNTYPE": "PAYMENT",
+                "DTPOSTED": "20260312120000",
+                "TRNAMT": "-85.50",
+                "FITID": "20260312003",
+                "MEMO": "Conta de Luz"
+              }
+            ]
+          },
+          "LEDGERBAL": {
+            "BALAMT": "2264.50",
+            "DTASOF": "20260318100000"
+          }
+        }
+      }
+    }
+  },
+  "header": {
+    "OFXHEADER": "100",
+    "DATA": "OFXSGML",
+    "VERSION": "102",
+    "SECURITY": "NONE",
+    "ENCODING": "USASCII",
+    "CHARSET": "1252",
+    "COMPRESSION": "NONE",
+    "OLDFILEUID": "NONE",
+    "NEWFILEUID": "NONE"
+  }
+}

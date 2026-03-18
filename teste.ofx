@@ -1,0 +1,76 @@
+OFXHEADER:100
+DATA:OFXSGML
+VERSION:102
+SECURITY:NONE
+ENCODING:USASCII
+CHARSET:1252
+COMPRESSION:NONE
+OLDFILEUID:NONE
+NEWFILEUID:NONE
+
+<OFX>
+  <SIGNONMSGSRSV1>
+    <SONRS>
+      <STATUS>
+        <CODE>0</CODE>
+        <SEVERITY>INFO</SEVERITY>
+      </STATUS>
+      <DTSERVER>20260318100000</DTSERVER>
+      <LANGUAGE>POR</LANGUAGE>
+      <FI>
+        <ORG>Banco Ficticio</ORG>
+        <FID>9999</FID>
+      </FI>
+    </SONRS>
+  </SIGNONMSGSRSV1>
+  <BANKMSGSRSV1>
+    <STMTTRNRS>
+      <TRNUID>1</TRNUID>
+      <STATUS>
+        <CODE>0</CODE>
+        <SEVERITY>INFO</SEVERITY>
+      </STATUS>
+      <STMTRS>
+        <CURDEF>BRL</CURDEF>
+        <BANKACCTFROM>
+          <BANKID>0001</BANKID>
+          <ACCTID>12345678-9</ACCTID>
+          <ACCTTYPE>CHECKING</ACCTTYPE>
+        </BANKACCTFROM>
+        <BANKTRANLIST>
+          <DTSTART>20260301000000</DTSTART>
+          <DTEND>20260315000000</DTEND>
+          
+          <STMTTRN>
+            <TRNTYPE>DEBIT</TRNTYPE>
+            <DTPOSTED>20260305120000</DTPOSTED>
+            <TRNAMT>-150.00</TRNAMT>
+            <FITID>20260305001</FITID>
+            <CHECKNUM>001</CHECKNUM>
+            <MEMO>Supermercado Exemplo</MEMO>
+          </STMTTRN>
+
+          <STMTTRN>
+            <TRNTYPE>CREDIT</TRNTYPE>
+            <DTPOSTED>20260310120000</DTPOSTED>
+            <TRNAMT>2500.00</TRNAMT>
+            <FITID>20260310002</FITID>
+            <MEMO>Deposito Salario</MEMO>
+          </STMTTRN>
+
+          <STMTTRN>
+            <TRNTYPE>PAYMENT</TRNTYPE>
+            <DTPOSTED>20260312120000</DTPOSTED>
+            <TRNAMT>-85.50</TRNAMT>
+            <FITID>20260312003</FITID>
+            <MEMO>Conta de Luz</MEMO>
+          </STMTTRN>
+        </BANKTRANLIST>
+        <LEDGERBAL>
+          <BALAMT>2264.50</BALAMT>
+          <DTASOF>20260318100000</DTASOF>
+        </LEDGERBAL>
+      </STMTRS>
+    </STMTTRNRS>
+  </BANKMSGSRSV1>
+</OFX>
