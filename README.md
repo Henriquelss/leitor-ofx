@@ -3,8 +3,6 @@
 Um projeto React + TypeScript premium para decodificar, analisar e compilar de forma escalonável seus arquivos bancários `.ofx`. Construído com design responsivo, alto desempenho e cache local.
 
 ## 📸 Preview
-<img width="1915" height="941" alt="Captura de tela 2026-03-18 124145" src="https://github.com/user-attachments/assets/79a4d8d9-5fba-467c-8bb0-701c1fe3fd42" />
-
 
 <p align="center">
   <table>
