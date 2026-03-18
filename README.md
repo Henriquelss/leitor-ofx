@@ -1,32 +1,77 @@
 # 📂 Leitor de Arquivos OFX (Processamento Soberano)
 
-Um projeto React + TypeScript premium para decodificar, analisar e compilar de forma escalonável seus arquivos bancários `.ofx`. Construído com design responsivo, alto desempenho e cache local.
+Um projeto React + TypeScript para decodificar, analisar e compilar de forma escalonável seus arquivos bancários `.ofx`. Construído com design responsivo, alto desempenho e cache local.
 
-![image](https://github.com/user-attachments/assets/b00705b1-bdf7-4757-a9b4-37b503b1137e)
+## 📸 Preview
+
+<p align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <div style="
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+          border: 1px solid #e5e7eb;
+        ">
+          <img 
+            src="https://github.com/user-attachments/assets/57cbe232-f09f-47cd-923d-37cd4c44c010" 
+            alt="Dashboard"
+            width="420"
+            height="260"
+            style="object-fit: cover; display: block;"
+          />
+        </div>
+        <sub><b>Dashboard de Transações</b></sub>
+      </td>
+      <td width="24"></td>
+      <td align="center">
+        <div style="
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+          border: 1px solid #e5e7eb;
+        ">
+          <img 
+            src="https://github.com/user-attachments/assets/79a4d8d9-5fba-467c-8bb0-701c1fe3fd42"
+            alt="Histórico"
+            width="420"
+            height="260"
+            style="object-fit: cover; display: block;"
+          />
+        </div>
+        <sub><b>Histórico Offline</b></sub>
+      </td>
+    </tr>
+  </table>
+</p>
 
 [![GitHub Pages Deploy](https://img.shields.io/github/deployments/henriquelss/consulta-veicular-fipe/github-pages?label=deploy)](https://henriquelss.github.io/leitor-ofx/)
 
+---
 
 ## ✨ Novas Funcionalidades (v2.0)
 
-- **Upload via Drag and Drop** de arquivos `.ofx`.
-- **Análise Inteligente de Metadados:** Conversão do conteúdo bruto usando um Parseador Regex Nativo imune a falhas de `xml2js`.
-- **Categorização Automática:** Atribuição dinâmica de tags coloridas (Alimentação, Transporte, Receitas, etc.) baseada em palavras-chave do extrato.
-- **Engine Matemático Inteligente:** Resumo global das transações num Dashboard calculado usando Hooks (`useMemo`) com altíssima performance.
-- **Histórico Offline:** Abas de navegação injetando a tecnologia de gravação no `LocalStorage`, permitindo revisitar todos os os pacotes parseados no passado diretamente na interface (feita com arquitetura Feature-based).
+- **Upload via Drag and Drop** de arquivos `.ofx`
+- **Análise Inteligente de Metadados:** Conversão do conteúdo bruto usando um Parseador Regex Nativo imune a falhas de `xml2js`
+- **Categorização Automática:** Atribuição dinâmica de tags coloridas (Alimentação, Transporte, Receitas, etc.) baseada em palavras-chave do extrato
+- **Engine Matemático Inteligente:** Resumo global das transações num Dashboard calculado usando Hooks (`useMemo`) com altíssima performance
+- **Histórico Offline:** Abas de navegação com persistência em `LocalStorage`, permitindo revisitar dados já processados
 
+---
 
 ## 🛠️ Arquitetura e Tecnologias
 
-A aplicação segue fielmente o modelo estruturado de **Feature-Based Architecture**, projetada para crescer infinitamente de forma independente:
+A aplicação segue o modelo estruturado de **Feature-Based Architecture**, projetada para escalar de forma modular:
 
 | Componente              | Tecnologias & Escolhas Arquiteturais                                      |
-|-------------------------|---------------------------------------------------------------------------|
-| **Core & UI Library**   | React.js 18 (Hooks, Context) + Vite.js                                    |
-| **Tipagem Criteriosa**  | TypeScript Strict Mode                                                    |
-| **Design System**       | Tailwind CSS v4 para estilização com JetBrains Mono para tipografia técnica |
-| **Parsing Seguro**      | Extrator assíncrono RegExp puro 100% Client-Side.                        |
+|------------------------|---------------------------------------------------------------------------|
+| **Core & UI Library**  | React.js 18 (Hooks, Context) + Vite.js                                    |
+| **Tipagem**            | TypeScript (Strict Mode)                                                  |
+| **Design System**      | Tailwind CSS v4 + JetBrains Mono                                          |
+| **Parsing**            | Regex puro (client-side, sem libs externas)                               |
 
+---
 
 ## 🚀 Como Executar Localmente
 
