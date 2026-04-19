@@ -33,7 +33,7 @@ export default function Header({ activeTab, onChangeTab }: HeaderProps) {
         </button>
       </div>
 
-      <nav className={`${isMenuOpen ? 'flex flex-col items-start absolute top-20 left-4 right-4 bg-white p-6 shadow-2xl rounded-2xl z-50 border border-slate-100 gap-6 animate-[fadeIn_0.2s_ease-out]' : 'hidden'} md:flex md:items-center md:static md:flex-row md:bg-transparent md:p-0 md:shadow-none md:border-none md:w-auto md:justify-center gap-4 md:gap-8 text-sm md:text-sm text-lg font-semibold text-slate-500`}>
+      <nav className={`${isMenuOpen ? 'flex flex-col items-start absolute top-20 left-4 right-4 bg-white p-6 shadow-2xl rounded-2xl z-50 border border-slate-100 animate-[fadeIn_0.2s_ease-out]' : 'hidden'} md:flex md:items-center md:static md:flex-row md:bg-transparent md:p-0 md:shadow-none md:border-none md:w-auto md:justify-center gap-6 md:gap-8 text-lg md:text-sm font-semibold text-slate-500`}>
         <button 
           onClick={() => switchTab('processor')}
           className={`pb-1 w-fit transition-colors ${activeTab === 'processor' ? 'text-slate-900 border-b-2 border-slate-900' : 'hover:text-slate-900'}`}
